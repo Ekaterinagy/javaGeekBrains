@@ -9,16 +9,9 @@ import java.util.List;
 public class Task2 {
     public static void main(String[] args) {
         Integer[] inputArray = {1,2,3,4,5,6,7,8,9,10};
-        List<Integer> inputList = new ArrayList<>();
-        inputList.addAll(Arrays.asList(inputArray));
+        List<Integer> inputList = new ArrayList<>(Arrays.asList(inputArray));
         System.out.println("inputList:\t"+inputList);
-        Iterator<Integer> iterator = inputList.iterator();
-        while (iterator.hasNext()){
-            Integer next = iterator.next();
-            if (next%2==0){
-                iterator.remove();
-            }
-        }
+        inputList.removeIf(next -> next % 2 == 0);
         System.out.println("outputList:\t"+ inputList);
     }
 }
