@@ -18,7 +18,7 @@ public class Task1 {
         int[] r = new int[n - mid];
 
         System.arraycopy(a, 0, l, 0, mid);
-        if (n - mid >= 0) System.arraycopy(a, mid, r, mid - mid, n - mid);
+        if (n - mid >= 0) System.arraycopy(a, mid, r, 0, n - mid);
         mergeSort(l, mid);
         mergeSort(r, n - mid);
 
